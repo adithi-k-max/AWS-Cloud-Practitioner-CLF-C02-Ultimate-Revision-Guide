@@ -374,6 +374,60 @@ Study:
 
 ---
 
+# Mock Tests Are Extremely Important
+
+Do not spend all your time reading notes and never testing yourself.
+
+Mock tests play a crucial role in AWS Cloud Practitioner preparation because they help you:
+
+- Identify weak domains
+- Recognize AWS service patterns
+- Improve elimination skills
+- Understand AWS question wording
+- Build confidence before the actual exam
+
+Taking a mock test is only half the work.
+
+The real learning happens when reviewing your mistakes.
+
+For every incorrect question:
+
+1. Identify the concept being tested.
+2. Understand why the correct answer is correct.
+3. Understand why the other options are wrong.
+4. Learn the use case of every service mentioned in the options.
+5. Add important keywords and concepts to your revision notes.
+
+One reviewed mock test can teach more than hundreds of memorized questions.
+
+---
+
+## Recommended Approach
+
+1. Study a domain.
+2. Take a mock test.
+3. Analyze mistakes.
+4. Revise weak concepts.
+5. Take another mock test.
+
+Repeat the cycle until the exam.
+
+---
+
+## Practice Resources
+
+You can find mock tests, practice resources, PDFs, and additional revision materials throughout this repository.
+
+Use them to validate your understanding, not just to check your score.
+
+Remember:
+
+**The goal is not to memorize answers.**
+
+**The goal is to understand concepts and recognize patterns.**
+
+---
+
 # Final Advice Before The Exam
 
 Do not spend your final hours trying to learn every AWS service.
