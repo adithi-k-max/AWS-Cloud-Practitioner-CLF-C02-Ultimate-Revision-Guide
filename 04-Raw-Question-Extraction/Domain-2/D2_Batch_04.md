@@ -1,410 +1,599 @@
-DOMAIN 2 — SECURITY & COMPLIANCE — FINAL BATCH
+# DOMAIN 2 — FINAL BATCH
 
-This is the final sweep of the remaining high-yield Security & Compliance concepts that repeatedly appear in CLF-C02.
+## Security & Compliance
 
-Question #8
-Question
+> This final batch covers the remaining high-yield Security & Compliance concepts frequently tested in CLF-C02.
+>
+> Focus Areas:
+>
+> * Shared Responsibility Model
+> * Root User Security
+> * CloudTrail
+> * KMS
+> * AWS Config
+> * AWS WAF
+> * AWS Security Hub
+
+---
+
+# Question 8 — Shared Responsibility Model
+
+## Question
 
 According to the AWS Shared Responsibility Model, who is responsible for patching the physical infrastructure that supports AWS services?
 
-Options
+## Options
 
-A. Customer
+| Option | Entity             |
+| ------ | ------------------ |
+| A      | Customer           |
+| B      | AWS Partner        |
+| C      | AWS                |
+| D      | Third-Party Vendor |
 
-B. AWS Partner
+## Correct Answer
 
-C. AWS
+✅ **C. AWS**
 
-D. Third-party vendor
-
-Correct Answer
-
-✅ C. AWS
-
-Why Correct?
+## Why Correct?
 
 AWS manages:
 
-Physical servers
-Storage devices
-Networking hardware
-Data centers
-Why Others Are Wrong?
+* Physical servers
+* Storage devices
+* Networking hardware
+* Data centers
 
-A Customer
-Only manages resources inside AWS.
+---
 
-B AWS Partner
-Not responsible for AWS infrastructure.
+## Why Others Are Wrong?
 
-D Third-party vendor
-Not applicable.
+| Option | Reason                                                  |
+| ------ | ------------------------------------------------------- |
+| A      | Customer manages resources inside AWS                   |
+| B      | AWS Partners are not responsible for AWS infrastructure |
+| D      | Not applicable                                          |
 
-SERVICE: Shared Responsibility Model
-Definition
+---
+
+## Service: Shared Responsibility Model
+
+### Definition
 
 AWS secures the cloud infrastructure.
 
-Exam Trap
+Customers secure their resources within AWS.
+
+### Exam Traps
 
 Physical Hardware = AWS
 
 Operating System on EC2 = Customer
 
-Question #605 Variant
-Question
+### Memory Trick
+
+AWS = Security OF the Cloud
+
+Customer = Security IN the Cloud
+
+---
+
+# Question 605 Variant — AWS CloudTrail
+
+## Question
 
 A security team needs to determine which IAM user deleted an Amazon EC2 instance.
 
 Which AWS service should they use?
 
-Options
+## Options
 
-A. CloudWatch
+| Option | Service    |
+| ------ | ---------- |
+| A      | CloudWatch |
+| B      | CloudTrail |
+| C      | GuardDuty  |
+| D      | Macie      |
 
-B. CloudTrail
+## Correct Answer
 
-C. GuardDuty
+✅ **B. AWS CloudTrail**
 
-D. Macie
-
-Correct Answer
-
-✅ B. AWS CloudTrail
-
-Why Correct?
+## Why Correct?
 
 CloudTrail records:
 
-API calls
-User activity
-Resource actions
-Why Others Are Wrong?
+* API calls
+* User activity
+* Resource actions
+* Account events
 
-A CloudWatch
-Metrics and monitoring.
+---
 
-C GuardDuty
-Threat detection.
+## Why Others Are Wrong?
 
-D Macie
-Sensitive data discovery.
+| Option | Reason                   |
+| ------ | ------------------------ |
+| A      | Monitoring and metrics   |
+| C      | Threat detection         |
+| D      | Sensitive data discovery |
 
-SERVICE: CloudTrail
-Definition
+---
+
+## Service: AWS CloudTrail
+
+### Definition
 
 AWS audit logging service.
 
-Key Features
-Who did what
-When it happened
-Which resource was affected
-Memory Trick
+### Key Features
 
-CloudTrail = Security CCTV.
+* Who performed an action
+* When it happened
+* Which resource was affected
+* Governance and compliance support
 
-Question #620
-Question
+### Exam Traps
+
+Audit Logs = CloudTrail
+
+Metrics = CloudWatch
+
+### Memory Trick
+
+CloudTrail = Security CCTV
+
+---
+
+# Question 620 — AWS KMS
+
+## Question
 
 Which AWS service enables customers to control encryption keys used to encrypt AWS resources?
 
-Options
+## Options
 
-A. AWS KMS
+| Option | Service    |
+| ------ | ---------- |
+| A      | AWS KMS    |
+| B      | IAM        |
+| C      | CloudTrail |
+| D      | Route 53   |
 
-B. IAM
+## Correct Answer
 
-C. CloudTrail
+✅ **A. AWS KMS**
 
-D. Route 53
+## Why Correct?
 
-Correct Answer
+KMS manages:
 
-✅ A. AWS KMS
+* Encryption keys
+* Key rotation
+* Key policies
+* Access control for keys
 
-Why Correct?
+---
 
-KMS handles:
+## Why Others Are Wrong?
 
-Encryption keys
-Key rotation
-Key policies
-Why Others Are Wrong?
+| Option | Reason                 |
+| ------ | ---------------------- |
+| B      | Permissions management |
+| C      | Audit logging          |
+| D      | DNS service            |
 
-B IAM
-Permissions.
+---
 
-C CloudTrail
-Auditing.
+## Service: AWS Key Management Service (KMS)
 
-D Route53
-DNS.
-
-SERVICE: AWS KMS
-Definition
+### Definition
 
 Managed encryption key service.
 
-Exam Trap
+### Key Features
+
+* Customer-managed keys
+* Automatic key rotation
+* Centralized key management
+
+### Exam Traps
 
 Encryption Keys = KMS
 
-Encryption itself often uses KMS-managed keys.
+Encryption often uses KMS-managed keys.
 
-Question #621
-Question
+### Memory Trick
+
+KMS = Key Management Service
+
+---
+
+# Question 621 — Root User Security
+
+## Question
 
 A company wants to secure its AWS account root user.
 
 Which action follows AWS best practices?
 
-Options
+## Options
 
-A. Create access keys for root user
+| Option | Action                                 |
+| ------ | -------------------------------------- |
+| A      | Create access keys for root user       |
+| B      | Share root credentials                 |
+| C      | Enable MFA on root user                |
+| D      | Use root user for daily administration |
 
-B. Share root credentials
+## Correct Answer
 
-C. Enable MFA on root user
+✅ **C. Enable MFA on Root User**
 
-D. Use root user for daily administration
+## Why Correct?
 
-Correct Answer
+AWS recommends:
 
-✅ C. Enable MFA on root user
+* MFA enabled on root account
+* Minimal root account usage
 
-Why Correct?
+---
 
-Root user should have:
+## Why Others Are Wrong?
 
-MFA enabled
-Minimal usage
-Why Others Are Wrong?
+| Option | Reason                           |
+| ------ | -------------------------------- |
+| A      | Avoid root access keys           |
+| B      | Never share credentials          |
+| D      | Use IAM users for administration |
 
-A
-Avoid root access keys.
+---
 
-B
-Never share credentials.
+## Service: Root User Security
 
-D
-Use IAM users instead.
-
-SERVICE: Root User Security
-Definition
+### Definition
 
 Best practices for protecting the AWS account owner account.
 
-Key Features
-MFA
-Emergency use only
-Exam Trap
+### Key Features
+
+* MFA enabled
+* Emergency use only
+* No shared access
+
+### Exam Traps
 
 Root User = Rarely Used
 
-Question #622
-Question
+Root User ≠ Daily Administration
+
+### Memory Trick
+
+Root User = Break Glass Account
+
+---
+
+# Question 622 — AWS Config
+
+## Question
 
 Which AWS service helps evaluate AWS resources against compliance rules continuously?
 
-Options
+## Options
 
-A. AWS Config
+| Option | Service    |
+| ------ | ---------- |
+| A      | AWS Config |
+| B      | CloudTrail |
+| C      | Route 53   |
+| D      | SNS        |
 
-B. CloudTrail
+## Correct Answer
 
-C. Route53
+✅ **A. AWS Config**
 
-D. SNS
+## Why Correct?
 
-Correct Answer
+Config continuously evaluates resources against compliance rules.
 
-✅ A. AWS Config
+---
 
-Why Correct?
+## Why Others Are Wrong?
 
-Config evaluates resources continuously.
+| Option | Reason                |
+| ------ | --------------------- |
+| B      | Records activity logs |
+| C      | DNS service           |
+| D      | Notification service  |
 
-Why Others Are Wrong?
+---
 
-B
-Logs activity.
+## Service: AWS Config
 
-C
-DNS.
+### Definition
 
-D
-Notifications.
+Compliance monitoring and configuration tracking service.
 
-SERVICE: AWS Config
-Definition
+### Key Features
 
-Compliance monitoring service.
+* Compliance rules
+* Resource inventory
+* Configuration history
+* Continuous evaluation
 
-Key Features
-Compliance rules
-Configuration history
-Resource inventory
-Exam Trap
+### Exam Traps
 
 Compliance Monitoring = Config
 
 Audit Logs = CloudTrail
 
-Question #623
-Question
+### Memory Trick
+
+Config Checks Configuration
+
+---
+
+# Question 623 — AWS WAF
+
+## Question
 
 Which AWS service provides protection against SQL injection attacks?
 
-Options
+## Options
 
-A. Shield
+| Option | Service          |
+| ------ | ---------------- |
+| A      | AWS Shield       |
+| B      | AWS WAF          |
+| C      | Amazon Inspector |
+| D      | Amazon Macie     |
 
-B. WAF
+## Correct Answer
 
-C. Inspector
+✅ **B. AWS WAF**
 
-D. Macie
+## Why Correct?
 
-Correct Answer
+WAF filters malicious HTTP requests before they reach applications.
 
-✅ B. AWS WAF
+---
 
-Why Correct?
+## Why Others Are Wrong?
 
-WAF filters malicious HTTP requests.
+| Option | Reason                   |
+| ------ | ------------------------ |
+| A      | DDoS protection          |
+| C      | Vulnerability scanning   |
+| D      | Sensitive data discovery |
 
-Why Others Are Wrong?
+---
 
-A Shield
-DDoS protection.
+## Service: AWS WAF
 
-C Inspector
-Vulnerability assessment.
-
-D Macie
-Sensitive data detection.
-
-SERVICE: AWS WAF
-Definition
+### Definition
 
 Web Application Firewall.
 
-Key Features
-SQL injection protection
-Cross-site scripting protection
-Exam Trap
+### Key Features
 
-Web attacks = WAF
+* SQL injection protection
+* Cross-site scripting (XSS) protection
+* HTTP request filtering
+
+### Exam Traps
+
+SQL Injection = WAF
+
+XSS = WAF
 
 DDoS = Shield
 
-Question #624
-Question
+### Memory Trick
+
+WAF Protects Websites
+
+---
+
+# Question 624 — AWS Security Hub
+
+## Question
 
 A company wants a centralized dashboard for security findings collected from multiple AWS security services.
 
-Options
+## Options
 
-A. Security Hub
+| Option | Service            |
+| ------ | ------------------ |
+| A      | AWS Security Hub   |
+| B      | AWS CloudFormation |
+| C      | AWS Lambda         |
+| D      | Amazon Route 53    |
 
-B. CloudFormation
+## Correct Answer
 
-C. Lambda
+✅ **A. AWS Security Hub**
 
-D. Route53
+## Why Correct?
 
-Correct Answer
+Security Hub aggregates findings from:
 
-✅ A. AWS Security Hub
+* GuardDuty
+* Inspector
+* Macie
+* Partner security tools
 
-Why Correct?
+---
 
-Security Hub aggregates findings.
+## Why Others Are Wrong?
 
-Why Others Are Wrong?
+| Option | Reason                    |
+| ------ | ------------------------- |
+| B      | Infrastructure deployment |
+| C      | Serverless compute        |
+| D      | DNS service               |
 
-B
-Infrastructure deployment.
+---
 
-C
-Serverless compute.
+## Service: AWS Security Hub
 
-D
-DNS.
-
-SERVICE: AWS Security Hub
-Definition
+### Definition
 
 Centralized security findings dashboard.
 
-Key Features
-Aggregates GuardDuty
-Aggregates Inspector
-Aggregates Macie
-Memory Trick
+### Key Features
 
-Security Hub = Security Headquarters.
+* Aggregated findings
+* Compliance monitoring
+* Security visibility
+* Centralized reporting
 
-DOMAIN 2 MASTER CHEAT SHEET
-🔥 Security Services Comparison
-Service	Purpose
-IAM	Permissions
-IAM Role	Service Access
-IAM Identity Center	Single Sign-On
-Cognito	App User Authentication
-CloudTrail	Audit Logs
-CloudWatch	Monitoring
-Config	Compliance Monitoring
-GuardDuty	Threat Detection
-Inspector	Vulnerability Scanning
-Macie	Sensitive Data Discovery
-Security Hub	Central Security Dashboard
-Shield	DDoS Protection
-WAF	SQL Injection & XSS Protection
-KMS	Encryption Keys
-Artifact	Compliance Reports
-🔥 20 Facts You Must Memorize
-EC2 → S3 access = IAM Role
-API Logs = CloudTrail
-Metrics = CloudWatch
-Threat Detection = GuardDuty
-Vulnerability Scan = Inspector
-Sensitive Data = Macie
+### Exam Traps
+
 Security Dashboard = Security Hub
-SQL Injection = WAF
-DDoS = Shield
-Encryption Keys = KMS
-Compliance Reports = Artifact
-Compliance Monitoring = Config
-Single Sign-On = IAM Identity Center
-App Authentication = Cognito
-MFA on Root User
-Least Privilege Principle
-Security Group = Instance Firewall
-NACL = Subnet Firewall
-AWS manages Hardware
-Customer manages IAM & Data
-🎯 Domain 2 Completion Status
 
-For Cloud Practitioner exam preparation purposes:
+Threat Detection = GuardDuty
 
-✅ IAM — Covered
-✅ Roles — Covered
-✅ MFA — Covered
-✅ Shared Responsibility — Covered
-✅ CloudTrail — Covered
-✅ Config — Covered
-✅ KMS — Covered
-✅ WAF — Covered
-✅ Shield — Covered
-✅ GuardDuty — Covered
-✅ Inspector — Covered
-✅ Macie — Covered
-✅ Security Hub — Covered
-✅ Cognito — Covered
-✅ IAM Identity Center — Covered
-✅ Artifact — Covered
-✅ Security Groups — Covered
-✅ NACLs — Covered
+### Memory Trick
 
-Domain 2 is effectively complete for CLF-C02 revision.
+Security Hub = Security Headquarters
+
+---
+
+# DOMAIN 2 MASTER CHEAT SHEET
+
+## 🔥 Security Services Comparison
+
+| Service             | Purpose                         |
+| ------------------- | ------------------------------- |
+| IAM                 | Permissions Management          |
+| IAM Role            | Service Access                  |
+| IAM Identity Center | Single Sign-On (SSO)            |
+| Cognito             | Application User Authentication |
+| CloudTrail          | Audit Logs                      |
+| CloudWatch          | Monitoring                      |
+| AWS Config          | Compliance Monitoring           |
+| GuardDuty           | Threat Detection                |
+| Inspector           | Vulnerability Scanning          |
+| Macie               | Sensitive Data Discovery        |
+| Security Hub        | Central Security Dashboard      |
+| Shield              | DDoS Protection                 |
+| WAF                 | SQL Injection & XSS Protection  |
+| KMS                 | Encryption Keys                 |
+| Artifact            | Compliance Reports              |
+
+---
+
+## 🔥 20 Facts You Must Memorize
+
+| Concept                  | Answer              |
+| ------------------------ | ------------------- |
+| EC2 → S3 Access          | IAM Role            |
+| API Logs                 | CloudTrail          |
+| Metrics                  | CloudWatch          |
+| Threat Detection         | GuardDuty           |
+| Vulnerability Scan       | Inspector           |
+| Sensitive Data Discovery | Macie               |
+| Security Dashboard       | Security Hub        |
+| SQL Injection Protection | WAF                 |
+| DDoS Protection          | Shield              |
+| Encryption Keys          | KMS                 |
+| Compliance Reports       | Artifact            |
+| Compliance Monitoring    | Config              |
+| Single Sign-On           | IAM Identity Center |
+| App Authentication       | Cognito             |
+| Root User Security       | Enable MFA          |
+| Security Principle       | Least Privilege     |
+| Instance Firewall        | Security Group      |
+| Subnet Firewall          | NACL                |
+| Hardware Management      | AWS                 |
+| IAM & Data Management    | Customer            |
+
+---
+
+## 🎯 Domain 2 Completion Status
+
+### Identity & Access Management
+
+✅ IAM
+
+✅ IAM Roles
+
+✅ IAM Identity Center
+
+✅ Cognito
+
+✅ MFA
+
+✅ Least Privilege
+
+---
+
+### Shared Responsibility Model
+
+✅ AWS Responsibilities
+
+✅ Customer Responsibilities
+
+---
+
+### Monitoring & Compliance
+
+✅ CloudTrail
+
+✅ AWS Config
+
+✅ Artifact
+
+---
+
+### Security Services
+
+✅ GuardDuty
+
+✅ Inspector
+
+✅ Macie
+
+✅ Security Hub
+
+✅ WAF
+
+✅ Shield
+
+✅ KMS
+
+---
+
+### Network Security
+
+✅ Security Groups
+
+✅ Network ACLs
+
+---
+
+# DOMAIN 2 REVISION SUMMARY
+
+```text
+IAM                  → Permissions
+IAM Role             → Service Access
+IAM Identity Center  → SSO
+Cognito              → App Authentication
+CloudTrail           → Audit Logs
+CloudWatch           → Monitoring
+Config               → Compliance
+GuardDuty            → Threat Detection
+Inspector            → Vulnerability Scanning
+Macie                → Sensitive Data Discovery
+Security Hub         → Security Dashboard
+WAF                  → SQL Injection / XSS
+Shield               → DDoS Protection
+KMS                  → Encryption Keys
+Artifact             → Compliance Reports
+Security Group       → Instance Firewall
+NACL                 → Subnet Firewall
+AWS                  → Hardware & Infrastructure
+Customer             → IAM, Data, Access Control
+```
+
+**Domain 2 is effectively complete for CLF-C02 revision.**
