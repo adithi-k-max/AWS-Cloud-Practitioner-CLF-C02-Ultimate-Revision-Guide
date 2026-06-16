@@ -599,12 +599,3 @@ Basic Support      → Free
 Business Support   → 24/7 Support
 Enterprise Support → Highest Support Level
 ```
-
-For last-minute revision:
-
-1. Read Domain 2 Master Cheat Sheet
-2. Read Domain 4 Master Cheat Sheet
-3. Review Domain 3 Service Comparisons
-4. Sleep well before the exam
-
-These domains cover the overwhelming majority of recurring AWS CLF-C02 concepts and exam traps.
