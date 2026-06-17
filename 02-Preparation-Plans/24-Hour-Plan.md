@@ -1,19 +1,16 @@
 # AWS CLF-C02 — 24 Hour Emergency Preparation Plan
 
-> I passed the AWS Certified Cloud Practitioner (CLF-C02) exam after starting my preparation roughly 24 hours before the exam.
+> Yes, I actually passed the AWS Certified Cloud Practitioner (CLF-C02) exam after seriously preparing for roughly the final 24 hours before the exam.
 >
 > This is not the ideal way to prepare.
 >
-> But if your exam is tomorrow and you are starting late, this guide will show you exactly how I approached it and how to use this repository effectively.
+> But if your exam is tomorrow and you are starting late, this plan can help you maximize your chances.
 
 ---
 
-# Best Piece of advice I would give:
-     "ELIMINATION IS THE KEY"
----
-# My Starting Point
+# First Reality Check
 
-Before preparing for this certification, I knew almost nothing about AWS Cloud Practitioner.
+Before this exam, I knew almost nothing about AWS Cloud Practitioner.
 
 I did not know:
 
@@ -22,167 +19,338 @@ I did not know:
 * The domain weightage
 * The passing score
 * Whether there was negative marking
-* How AWS certifications were structured
 * How many questions would appear
-* The difference between scored and unscored questions
+* How AWS certifications worked
 
 I started from scratch.
 
 Less than 24 hours before the exam, I was still trying to understand what the certification actually covered.
 
----
+If you are in a similar situation, do not panic.
 
-# The Biggest Mistake Students Make
+The objective now is not mastering AWS.
 
-Many students think:
-
-> "If I collect enough dumps, I can pass."
-
-Not necessarily.
-
-The problem with memorization is simple.
-
-AWS can change:
-
-* Question wording
-* Scenarios
-* Answer options
-* Question structure
-
-If you only memorize answers, you become dependent on seeing the exact same question again.
-
-Understanding concepts is much more reliable.
+The objective is identifying the most important concepts, services, keywords, and exam patterns.
 
 ---
 
-# What Actually Helped Me Pass
+# Important Mindset
 
-I did not focus on memorizing answers.
+Many people think:
 
-I focused on understanding concepts.
+> "If I memorize enough dumps, I can pass."
 
-The faster you understand the concept behind a service, the faster you can:
+Not really.
 
-* Recognize keywords
-* Eliminate wrong answers
-* Compare services
-* Select the best answer
+AWS changes wording frequently.
 
-In many questions, elimination alone can get you to the correct answer.
+The real skill is:
 
----
+* Understanding the concept
+* Recognizing service use cases
+* Identifying AWS keywords
+* Eliminating incorrect answers quickly
 
-# The Method I Used For Every Question
+The faster you understand concepts, the faster you eliminate options.
 
-For every question, I followed the same pattern.
-
-## Step 1 — Read The Question
-
-Do not immediately search for the answer.
-
-First ask:
-
-> What concept is AWS testing?
-
-Is it:
-
-* Security?
-* Storage?
-* Networking?
-* Monitoring?
-* Pricing?
-* Cloud Concepts?
+The faster you eliminate options, the easier the exam becomes.
 
 ---
 
-## Step 2 — Analyze Every Option
+# How To Use This Repository
 
-Every option exists for a reason.
+Follow this exact order.
+
+Do not jump randomly between folders.
+
+---
+
+# Step 1 — Understand The Exam (30 Minutes)
+
+Read:
+
+* 00-About-This-Repository
+* 01-Verification
+
+Understand:
+
+* Exam domains
+* Exam pattern
+* Repository structure
+* Study approach
+
+---
+
+# Step 2 — Learn The Highest-Scoring Domain (3 Hours)
+
+Read:
+
+## Domain 2 — Security & Compliance
+
+From:
+
+* 05-Domain-Wise-Handbooks
+
+Focus on:
+
+* IAM
+* IAM Roles
+* MFA
+* Shared Responsibility Model
+* CloudTrail
+* CloudWatch
+* GuardDuty
+* Inspector
+* Macie
+* Security Hub
+* Cognito
+* KMS
+* WAF
+* Shield
+
+This domain appears repeatedly throughout the exam.
+
+---
+
+# Step 3 — Learn Core AWS Services (5 Hours)
+
+Read:
+
+## Domain 3 — Cloud Technology & Services
+
+Focus on:
+
+### Compute
+
+* EC2
+* Lambda
+* ECS
+* EKS
+* Fargate
+* Auto Scaling
+* ELB
+
+### Storage
+
+* S3
+* EBS
+* EFS
+* Glacier
+
+### Databases
+
+* RDS
+* Aurora
+* DynamoDB
+* Redshift
+
+### Networking
+
+* Route 53
+* CloudFront
+* Direct Connect
+* VPN
+
+### Monitoring & Messaging
+
+* SNS
+* SQS
+* CloudWatch
+
+---
+
+# Step 4 — Learn Domain 1 & Domain 4 (2 Hours)
+
+Read:
+
+## Domain 1 — Cloud Concepts
+
+Focus on:
+
+* Agility
+* Elasticity
+* Scalability
+* High Availability
+* Fault Tolerance
+* OPEX vs CAPEX
+* CAF
+* Well-Architected Framework
+
+---
+
+## Domain 4 — Billing & Pricing
+
+Focus on:
+
+* Cost Explorer
+* AWS Budgets
+* Pricing Calculator
+* Organizations
+* Reserved Instances
+* Spot Instances
+* Savings Plans
+
+---
+
+# Step 5 — Service Comparisons (2 Hours)
+
+Read:
+
+* 06-Service-Comparisons
+
+Focus heavily on:
+
+* GuardDuty vs Inspector
+* CloudTrail vs CloudWatch
+* SNS vs SQS
+* WAF vs Shield
+* Route 53 vs CloudFront
+* DynamoDB vs RDS
+* S3 vs EBS vs EFS
+* Security Group vs NACL
+* Reserved vs Spot vs On-Demand
+
+Most AWS questions become easier once you understand service comparisons.
+
+---
+
+# Step 6 — Exam Traps (1 Hour)
+
+Read:
+
+* 07-Exam-Traps
+
+Focus on:
+
+* Frequently confused services
+* Common AWS keywords
+* Repeated exam patterns
+
+---
+
+# Step 7 — Quick Video Revision (Optional)
+
+If you learn faster through videos:
+
+### Recommended
+
+AWS Certified Cloud Practitioner in 100 Minutes (CLF-C02)
+
+Channel: Cram Exam
+
+Duration: 1 Hour 45 Minutes
+
+Available in:
+
+* 03-Learning-Resources
+
+---
+
+### Telugu Learners
+
+AWS Full Course in Telugu
+
+Channel: CS & IT Tutorials 4U
+
+Duration: 2 Hours 23 Minutes
+
+Available in:
+
+* 03-Learning-Resources
+
+---
+
+# Step 8 — Mock Tests (Mandatory)
+
+Do not skip this step.
+
+Take mock tests from:
+
+* AWS Official Practice Question Set
+* Kanan Nair Practice Exams
+* Digital Cloud Practice Questions
+* W3Schools AWS Quiz
+
+(All available in 03-Learning-Resources)
+
+---
+
+# How To Review Mock Tests
+
+This is exactly how I studied.
+
+For every question:
+
+### Step 1
+
+Read the question.
 
 Ask:
 
-* What service is this?
-* What does it actually do?
-* Why is AWS showing this option?
-
-Even the wrong answers teach concepts.
+> What concept is AWS testing here?
 
 ---
 
-## Step 3 — Understand The Correct Answer
+### Step 2
 
-Do not memorize:
+Analyze every option.
 
-> "This option is correct."
+Ask:
 
-Instead understand:
-
-> "Why is this option correct?"
-
-When you understand the reason, similar questions become much easier.
+* What does this service do?
+* Why is it present here?
+* When would this option actually be correct?
 
 ---
 
-## Step 4 — Learn From Wrong Answers
+### Step 3
 
-This was probably the most valuable part of my preparation.
+Find the correct answer.
 
-For every wrong option, ask:
+Ask:
 
-* Why is it wrong here?
-* In which scenario would it be correct?
-* What concept does it represent?
-
-One question can teach multiple AWS services when studied this way.
+> Why is this answer correct?
 
 ---
 
-# How I Used AI
+### Step 4
 
-I did not use AI as an answer generator.
+Study the wrong answers.
 
-I used AI as a teacher.
+Ask:
 
-Whenever I found a dump question, I asked AI to explain:
+* Why are they incorrect here?
+* When would they become correct?
 
-* The question
-* The concept being tested
-* The correct answer
-* Why it is correct
-* Why the other options are wrong
-* The concepts behind the wrong options
-* Common exam traps
-* Memory tricks
+This is where most of the learning happens.
 
-This repository was built using exactly that process.
+One question can teach you four or five AWS services at the same time.
 
 ---
 
-# My Note-Taking Method
+# Create Your Own Cheat Sheet
 
-Whenever I learned a service, I did not write long documentation notes.
+Whenever you learn a service, write down:
 
-Instead, I wrote:
+| Service    | Keyword                |
+| ---------- | ---------------------- |
+| CloudWatch | Monitoring             |
+| CloudTrail | Audit Logs             |
+| GuardDuty  | Threat Detection       |
+| Inspector  | Vulnerability Scanning |
+| Route 53   | DNS                    |
+| CloudFront | CDN                    |
+| S3         | Object Storage         |
+| EBS        | Block Storage          |
+| EFS        | File Storage           |
+| DynamoDB   | NoSQL                  |
+| RDS        | Relational Database    |
+| SNS        | Notifications          |
+| SQS        | Queue                  |
+| WAF        | Web Protection         |
+| Shield     | DDoS Protection        |
 
-## Service Name
-
-### Purpose
-
-What is this service used for?
-
-### Key Points
-
-Only the most important facts.
-
-### Keywords
-
-What words should immediately remind me of this service?
-
-### Memory Trick
-
-A simple association to remember it faster.
-
-The goal was recognition, not memorization.
+The goal is instant recognition.
 
 ---
 
@@ -192,284 +360,70 @@ One thing I noticed during preparation:
 
 AWS service names often hint at their purpose.
 
-Many questions become easier when you stop overthinking and start understanding the service name and its purpose.
+Examples:
 
-AWS Cloud Practitioner is not designed to be a deep technical certification.
+| Service         | Common Sense Meaning       |
+| --------------- | -------------------------- |
+| CloudWatch      | Watches resources          |
+| CloudTrail      | Tracks activity            |
+| Route 53        | Routes traffic             |
+| Storage Gateway | Gateway for storage        |
+| Security Hub    | Central security dashboard |
+| Auto Scaling    | Automatically scales       |
+| Direct Connect  | Direct network connection  |
+| GuardDuty       | Guards against threats     |
 
-Many questions can be solved using:
-
-* Basic understanding
-* Service recognition
-* Elimination
-* Common sense
-
----
-
-# How To Use This Repository If You Have Only 24 Hours
-
-This repository is structured so you can focus on concepts rather than randomly jumping between resources.
+Many questions become easier when you stop overthinking and use common sense.
 
 ---
 
-# Step 1
-
-Go to:
-
-```text
-05-Domain-Wise-Handbooks
-```
+# Final Revision
 
 Read:
 
-* Domain 2 Handbook
-* Domain 3 Handbook
-* Domain 1 Handbook
-* Domain 4 Handbook
+* 08-Last-Minute-Revision
 
-Priority order:
+Focus only on:
 
-1. Domain 2
-2. Domain 3
-3. Domain 1
-4. Domain 4
+* Service Comparisons
+* Security Services
+* Storage Services
+* Networking Services
+* Pricing Models
+* Exam Traps
 
----
-
-# Step 2
-
-Go to:
-
-```text
-06-Service-Comparisons
-```
-
-Study:
-
-* SNS vs SQS
-* CloudTrail vs CloudWatch
-* Security Group vs NACL
-* WAF vs Shield
-* DynamoDB vs RDS
-* EBS vs EFS vs S3
-
-Many exam questions are comparison questions.
+Do not start learning new services at this stage.
 
 ---
 
-# Step 3
+# Final Goal
 
-Go to:
+By the end of these 24 hours you should be able to:
 
-```text
-07-Exam-Traps
-```
-
-Review:
-
-* Common mistakes
-* Shared Responsibility Model
-* Frequently confused services
-
----
-
-# Step 4
-
-Go to:
-
-```text
-08-Last-Minute-Revision
-```
-
-Read:
-
-* Final Revision Sheet
-* Top 100 Facts
-* Important Mappings
-
-These are extremely useful before the exam.
-
----
-
-# Step 5
-
-Go to:
-
-```text
-04-Raw-Question-Extraction
-```
-
-This is where the real learning happens.
-
-Do NOT memorize answers.
-
-Instead ask:
-
-* What concept is being tested?
-* Why is the answer correct?
-* Why are the other options wrong?
-* What service does each option represent?
-
-This is exactly how I studied.
-
----
-
-# My Revision Priority
-
-If I only had 24 hours:
-
-### Domain 2 — Security & Compliance
-
-Highest return.
-
-Study:
-
-* IAM
-* Roles
-* MFA
-* Shared Responsibility Model
-* CloudTrail
-* GuardDuty
-* Inspector
-* Macie
-* Security Hub
-* WAF
-* Shield
-
----
-
-### Domain 3 — Cloud Technology & Services
-
-Focus heavily here.
-
-This is the largest domain.
-
----
-
-### Domain 1 — Cloud Concepts
-
-Understand:
-
-* Agility
-* Elasticity
-* Scalability
-* High Availability
-* Fault Tolerance
-* OPEX vs CAPEX
-
----
-
-### Domain 4 — Billing & Pricing
-
-Easy marks.
-
-Study:
-
-* Cost Explorer
-* Budgets
-* Pricing Calculator
-* Organizations
-* Reserved Instances
-* Spot Instances
-* Savings Plans
-
----
-
-# Mock Tests Are Extremely Important
-
-Do not spend all your time reading notes and never testing yourself.
-
-Mock tests play a crucial role in AWS Cloud Practitioner preparation because they help you:
-
-- Identify weak domains
-- Recognize AWS service patterns
-- Improve elimination skills
-- Understand AWS question wording
-- Build confidence before the actual exam
-
-Taking a mock test is only half the work.
-
-The real learning happens when reviewing your mistakes.
-
-For every incorrect question:
-
-1. Identify the concept being tested.
-2. Understand why the correct answer is correct.
-3. Understand why the other options are wrong.
-4. Learn the use case of every service mentioned in the options.
-5. Add important keywords and concepts to your revision notes.
-
-One reviewed mock test can teach more than hundreds of memorized questions.
-
----
-
-## Recommended Approach
-
-1. Study a domain.
-2. Take a mock test.
-3. Analyze mistakes.
-4. Revise weak concepts.
-5. Take another mock test.
-
-Repeat the cycle until the exam.
-
----
-
-## Practice Resources
-
-You can find mock tests, practice resources, PDFs, and additional revision materials throughout this repository.
-
-Use them to validate your understanding, not just to check your score.
-
-Remember:
-
-**The goal is not to memorize answers.**
-
-**The goal is to understand concepts and recognize patterns.**
+* Recognize AWS services instantly
+* Identify AWS keywords quickly
+* Eliminate wrong answers confidently
+* Understand service use cases
+* Solve scenario-based questions effectively
 
 ---
 
 # Final Advice Before The Exam
 
-Do not spend your final hours trying to learn every AWS service.
+Do not try to memorize hundreds of answers.
 
-Focus on:
+Understand concepts.
 
-* Concepts
-* Comparisons
-* Exam traps
-* Keywords
-* Elimination
+Use elimination.
 
-Most importantly:
+Learn service purposes.
 
-> Understand why an answer is correct.
+Focus on keywords.
 
-Because when AWS changes the wording, understanding still works.
+Remember:
 
-Memorization does not.
+The goal is not to know every AWS service.
 
----
+The goal is to identify the correct service when AWS describes a problem.
 
-# If You Are Reading This One Day Before Your Exam
-
-Relax.
-
-You do not need to know everything.
-
-You only need to recognize what AWS is asking.
-
-Focus on concepts.
-
-Focus on understanding.
-
-Focus on elimination.
-
-Use AI to learn.
-
-Use dumps to discover concepts.
-
-Use notes to reinforce concepts.
-
-That approach helped me pass, and I hope this repository helps you do the same.
-
-Good luck.
+Good luck, and I hope this repository helps you pass just like it helped me.
