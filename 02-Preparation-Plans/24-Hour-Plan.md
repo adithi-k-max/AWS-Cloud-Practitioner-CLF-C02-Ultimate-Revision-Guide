@@ -46,6 +46,7 @@ AWS changes wording frequently.
 
 The real skill is:
 
+* "ELIMINATION IS THE KEY"
 * Understanding the concept
 * Recognizing service use cases
 * Identifying AWS keywords
